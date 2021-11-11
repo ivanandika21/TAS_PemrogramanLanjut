@@ -70,6 +70,10 @@
     background-color: #1e2931 !important;
 }
 
+.bdr-top {
+    border-top: 1px solid #0166ff;
+}
+
 .bg-image {
     background-image: url("./images/image-bg-image.png");
     background-size: cover;
