@@ -140,3 +140,16 @@ textarea:focus,
 select:focus {
     outline: none;
 }
+
+.foto-kos {
+    background-image: url("./images/image-kontrakan-1.png");
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    padding: 0;
+}
+
+.map-size {
+    width: 100%;
+    height: 500px;
+}
