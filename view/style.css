@@ -74,6 +74,11 @@
     border-top: 1px solid #0166ff;
 }
 
+.homebut {
+    position: absolute;
+    top: 5%;
+}
+
 .bg-image {
     background-image: url("./images/image-bg-image.png");
     background-size: cover;

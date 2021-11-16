@@ -49,7 +49,6 @@
                 <thead>
                     <tr>
                         <th scope="col">No</th>
-                        <th scope="col">#ID</th>
                         <th scope="col">Nama Item</th>
                         <th scope="col">Status Verifikasi</th>
                         <th scope="col">Status Pembayaran</th>
@@ -60,10 +59,35 @@
                     <!-- Mulai perulangan -->
                     <tr>
                         <th scope="row">1</th>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td>Kos A</td>
+                        <td>OK</td>
+                        <td>
+                            <button type="button" class="btn btn-primary rounded-pill px-3 shd-blue me-2" data-bs-toggle="modal" data-bs-target="#editModal">Bayar Sekarang</button>
+
+                            <!-- Edit Modal -->
+                            <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="editModalLabel">Edit Profil</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <p>Jika anda membayar secara langsung, klik tombol Bayar Langsung</p>
+                                            <p>
+                                                Jika anda membayar secara online, berikut rekening pemilik:<br />
+                                                BRC : 123456
+                                            </p>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary rounded-pill px-3 me-2" data-bs-dismiss="modal">Batal</button>
+                                            <button type="button" class="btn btn-primary rounded-pill px-3 me-2">Bayar Langsung</button>
+                                            <button type="button" class="btn btn-primary rounded-pill px-3 me-2">Bayar Online</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
                         <td>
                             <a class="btn btn-danger rounded-pill px-4" href="#" role="button">Hapus</a>
                         </td>
@@ -73,14 +97,12 @@
                         <td></td>
                         <td></td>
                         <td></td>
-                        <td></td>
                         <td>
                             <a class="btn btn-danger rounded-pill px-4" href="#" role="button">Hapus</a>
                         </td>
                     </tr>
                     <tr>
                         <th scope="row">3</th>
-                        <td></td>
                         <td></td>
                         <td></td>
                         <td></td>
