@@ -48,7 +48,9 @@
         <!-- stop section 1 -->
 
         <!-- start section 2 -->
-        <div class="foto-kos"></div>
+        <div class="container-fluid p-0">
+            <img class="w-100" src="./images/image-kos-1.png" alt="" />
+        </div>
         <!-- stop section 2 -->
 
         <div class="container d-flex my-5">
@@ -114,7 +116,27 @@
                         <h2>Rp 600.000</h2>
                         <p style="line-height: 300%">/bulan</p>
                     </div>
-                    <a class="btn btn-outline-light rounded-pill px-3 shd-blue" href="#" role="button">Sewa</a>
+                    <button type="button" class="btn btn-outline-light rounded-pill px-3 shd-blue me-2" data-bs-toggle="modal" data-bs-target="#konfirmBayar">Sewa</button>
+
+                    <!-- Edit Modal -->
+                    <div class="modal fade" id="konfirmBayar" tabindex="-1" aria-labelledby="konfirmBayarLabel" aria-hidden="true">
+                        <div class="modal-dialog f-color">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="konfirmBayarLabel">Konfirmasi Status Bayar</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <p>Anda yakin ingin menyewa?</p>
+                                    <p>Dengan menyewa kos ini, data anda akan</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary rounded-pill px-3 me-2" data-bs-dismiss="modal">Batal</button>
+                                    <button type="button" class="btn btn-primary rounded-pill px-3 me-2">Sewa</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="bg-color-g f-color my-5 p-4 rnd-box">
                     <h2>Informasi lainnya</h2>
