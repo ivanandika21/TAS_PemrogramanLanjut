@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="button.css" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+
+        <title>Halaman Admin - User</title>
+    </head>
+    <body class="f-color">
+        <!-- start navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-color-w shadow-sm">
+            <div class="container">
+                <a class="navbar-brand" href="#"> <img src="./images/image-logokotak.png" alt="" width="40" class="d-inline-block align-text-center" /> </a>
+                <span class="fs-4 fw-bold" href="">Kotak</span>
+
+                <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-link px-3 fw-bold f-color-b" aria-current="page" href="#">Home</a>
+                        <a class="nav-link px-3" href="#">Pencarian</a>
+                        <a class="nav-link px-3" href="#">Sewaku</a>
+                        <a class="nav-link px-3" href="#">FAQ</a>
+                        <a class="nav-link px-3" href="#">About</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="btn btn-primary dropdown-toggle rounded-pill px-4 shd-blue" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">Ivanandika</button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item" href="#">Profile</a></li>
+                        <li><a class="dropdown-item" href="#">Sewaku</a></li>
+                        <li><a class="dropdown-item" href="#">Logout</a></li>
+                    </ul>
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </nav>
+        <!-- stop navbar -->
+
+        <button type="button" class="btn btn-success rounded-pill px-3 shd-blue me-2" data-bs-toggle="modal" data-bs-target="#konfirmSewa">Konfirmasi</button>
+
+        <!-- Edit Modal -->
+        <div class="modal fade" id="konfirmSewa" tabindex="-1" aria-labelledby="konfirmSewaLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="konfirmSewaLabel">Konfirmasi Status Sewa</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Konfirmasi bahwa {{ Nama Penyewa }} bisa menyewa?</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary rounded-pill px-3 me-2" data-bs-dismiss="modal">Batal</button>
+                        <button type="button" class="btn btn-danger rounded-pill px-3 me-2">Tidak</button>
+                        <button type="button" class="btn btn-success rounded-pill px-3 me-2">Ya</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button type="button" class="btn btn-success rounded-pill px-3 shd-blue me-2" data-bs-toggle="modal" data-bs-target="#konfirmBayar">Konfirmasi</button>
+
+        <!-- Edit Modal -->
+        <div class="modal fade" id="konfirmBayar" tabindex="-1" aria-labelledby="konfirmBayarLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="konfirmBayarLabel">Konfirmasi Status Bayar</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Konfirmasi bahwa {{ Nama Penyewa }} sudah membayar?</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary rounded-pill px-3 me-2" data-bs-dismiss="modal">Batal</button>
+                        <button type="button" class="btn btn-success rounded-pill px-3 me-2">Sudah</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- table -->
+        <div class="container my-5 w-50">
+            <table class="table">
+                <tr>
+                    <td>Nama Tempat</td>
+                    <td>:</td>
+                    <td>Kos Anjing</td>
+                </tr>
+                <tr>
+                    <td>Penyewa</td>
+                    <td>:</td>
+                    <td>Anjing</td>
+                </tr>
+                <tr>
+                    <td>Status Sewa</td>
+                    <td>:</td>
+                    <td>Belum di konfirmasi</td>
+                </tr>
+                <tr>
+                    <td>Status Bayar</td>
+                    <td>:</td>
+                    <td>Belum di konfirmasi</td>
+                </tr>
+            </table>
+
+            <a class="btn btn-primary rounded-pill px-4 shd-blue" href="#idcari" role="button">Kembali</a>
+            <button type="button" class="btn btn-primary rounded-pill px-4 shd-blue position-relative">
+                Profile
+                <span class="position-absolute border border-3 top-0 start-100 translate-middle p-2 bg-success border border-light rounded-circle">
+                    <span class="visually-hidden">New alerts</span>
+                </span>
+            </button>
+            <button type="button" class="btn btn-primary rounded-pill px-4 shd-blue position-relative">
+                Inbox
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                    99+
+                    <span class="visually-hidden">unread messages</span>
+                </span>
+            </button>
+        </div>
+        <!-- stop table -->
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    </body>
+</html>
